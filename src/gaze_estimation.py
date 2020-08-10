@@ -1,50 +1,20 @@
-from openvino.inference_engine import IENetwork,IEPlugin
-import os
+from helper import Helper
 import cv2
-import argparse
-import sys
 import numpy as np
 import math
 
-class GazeEstimationModel:
+class GazeEstimationModel(Helper):
     '''
     Class for GE Model.
     '''
     def __init__(self, model, device, extensions=None):
-        '''
-        TODO: Use this to set your instance variables.
-        '''
-        self.model_structure = model
-        self.model_weights = os.path.splitext(model)[0]+".bin"
-        self.device = device
-        self.extensions = extensions
-
-        # Initialize the inference ingine
-        self.ie = IEPlugin(device=self.device)
-        try:  
-            self.net = IENetwork(self.model_structure, self.model_weights)
-        except Exception as e:
-            raise ValueError("Could not Initialise the network. Have you enterred the correct model path?")
-
-        # Get the input layer
-        self.input_name=next(iter(self.net.inputs))
+        super().__init__(model,device,extensions)
         self.input_shape_l=self.net.inputs['left_eye_image'].shape
         self.input_shape_r=self.net.inputs['right_eye_image'].shape
-        
-        self.output_name=next(iter(self.net.outputs))
-        self.output_shape=self.net.outputs[self.output_name].shape
-        #raise NotImplementedError
+
 
     def load_model(self):
-        '''
-        TODO: You will need to complete this method.
-        This method is for loading the model to the device specified by the user.
-        If your model requires any Plugins, this is where you can load them.
-        '''
-        # Loading network to device
-        self.exec_net = self.ie.load(network=self.net, num_requests=1)
-        
-        #raise NotImplementedError
+        Helper.load_model(self)
 
     def predict(self, left_eye_image, right_eye_image, hpa):
         '''
@@ -67,11 +37,6 @@ class GazeEstimationModel:
         new_mouse_coord, gaze_vector = self.preprocess_output(outputs, hpa)
 
         return new_mouse_coord, gaze_vector
-
-        #raise NotImplementedError
-
-    def check_model(self):
-        raise NotImplementedError
 
     def preprocess_input(self, le_image, re_image):
         '''
