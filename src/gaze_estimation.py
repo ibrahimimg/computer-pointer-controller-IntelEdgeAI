@@ -1,19 +1,27 @@
-from helper import Helper
 import cv2
 import numpy as np
-import math
+import logging
+import time
+from math import cos, sin, pi
+from helper import Helper
 
 class GazeEstimationModel(Helper):
     '''
-    Class for GE Model.
+    Class for the Gaze Estimation Model.
     '''
-    def __init__(self, model, device, extensions=None):
+    def __init__(self, model, device='CPU', extensions=None):
         super().__init__(model,device,extensions)
         self.input_shape_l=self.net.inputs['left_eye_image'].shape
         self.input_shape_r=self.net.inputs['right_eye_image'].shape
-
+        self.output_names = [n for n in self.net.outputs.keys()]
+        self.output_name = self.output_names
 
     def load_model(self):
+        '''
+        TODO: You will need to complete this method.
+        This method is for loading the model to the device specified by the user.
+        If your model requires any Plugins, this is where you can load them.
+        '''
         Helper.load_model(self)
 
     def predict(self, left_eye_image, right_eye_image, hpa):
@@ -21,53 +29,39 @@ class GazeEstimationModel(Helper):
         TODO: You will need to complete this method.
         This method is meant for running predictions on the input image.
         '''
-
-        self.current_frame_l = left_eye_image
-        self.current_frame_r = right_eye_image
+        # process the input
+        LR_input_result = self.preprocess_input(left_eye_image, right_eye_image = right_eye_image)
+        if LR_input_result is None:
+            return None, None
         
-        # process the current frame
-        self.pr_frame = self.preprocess_input(left_eye_image, right_eye_image)
+        le_img_processed, re_img_processed = LR_input_result
+        self.p_frame = LR_input_result
         
-        le_img_processed, re_img_processed = self.preprocess_input(left_eye_image.copy(), right_eye_image.copy())
-        self.exec_net.requests[0].infer({
-            'head_pose_angles':hpa, 
-            'left_eye_image':le_img_processed, 
-            'right_eye_image':re_img_processed})
-        outputs = self.exec_net.requests[0].outputs[self.output_name]
-        new_mouse_coord, gaze_vector = self.preprocess_output(outputs, hpa)
+        _input_dict = {
+            'head_pose_angles':hpa,
+            'left_eye_image':le_img_processed,
+            'right_eye_image':re_img_processed
+        }
+        
+        # Perform inference on the frame and get output results
+        result = self.req_get(r_type="sync", input_dict=_input_dict)
 
+        outputs = self.preprocess_output(result, hpa)
+        new_mouse_coord = outputs[0]
+        gaze_vector = outputs [1]
         return new_mouse_coord, gaze_vector
 
-    def preprocess_input(self, le_image, re_image):
-        '''
-        Before feeding the data into the model for inference,
-        you might have to preprocess it. This function is where you can do that.
-        '''
-        # Pre-process the image as needed #
-        _width=self.input_shape_l
-        _height=self.input_shape_r
-        
-        le_res_image = cv2.resize(le_image, (self.input_shape_l[3], self.input_shape_l[2]))
-        re_res_image = cv2.resize(re_image, (self.input_shape_r[3], self.input_shape_r[2]))
-
-        le_p_image = np.transpose(np.expand_dims(le_res_image,axis=0), (0,3,1,2))
-        re_p_image = np.transpose(np.expand_dims(le_res_image,axis=0), (0,3,1,2))
-        
-        return le_p_image, re_p_image
-        #raise NotImplementedError
-
-    def preprocess_output(self, outputs, hpa):
+    def preprocess_output(self, outputs, hpe_angles):
         '''
         Before feeding the output of this model to the next model,
         you might have to preprocess the output. This function is where you can do that.
         '''
-
-        gaze_vector = outputs[0]
-        #gaze_vector = gaze_vector / cv2.norm(gaze_vector)
-        rollValue = hpa[2] #angle_r_fc output from HeadPoseEstimation model
-        cosValue = math.cos(rollValue * math.pi / 180.0)
-        sinValue = math.sin(rollValue * math.pi / 180.0)
+        gaze_vector = list(outputs[self.output_names[0]])[0]
+  
+        cos_value = cos(hpe_angles[2]*pi/180.0)
+        sin_value = sin(hpe_angles[2]*pi/180.0)
         
-        newx = gaze_vector[0] * cosValue + gaze_vector[1] * sinValue
-        newy = -gaze_vector[0] *  sinValue+ gaze_vector[1] * cosValue
-        return (newx,newy), gaze_vector
+        new_x = gaze_vector[0]*cos_value+gaze_vector[1]*sin_value
+        new_y = (-gaze_vector[0])*sin_value+gaze_vector[1]*cos_value
+        
+        return (new_x,new_y), gaze_vector

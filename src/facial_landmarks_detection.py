@@ -1,15 +1,21 @@
-from helper import Helper
 import cv2
 import numpy as np
-
+from helper import Helper
+import time
 class FacialLandmarksDetectionModel(Helper):
     '''
-    Class for FL Model.
+    Class for the Facial Landmarks Detection Model.
     '''
-    def __init__(self, model, device, extensions=None):
+    def __init__(self, model, device='CPU', extensions=None):
         super().__init__(model,device,extensions)
+        self.current_frame = None
 
     def load_model(self):
+        '''
+        TODO: You will need to complete this method.
+        This method is for loading the model to the device specified by the user.
+        If your model requires any Plugins, this is where you can load them.
+        '''
         Helper.load_model(self)
 
     def predict(self, image):
@@ -21,45 +27,33 @@ class FacialLandmarksDetectionModel(Helper):
         self.current_frame = image
         # process the current frame
         self.pr_frame = self.preprocess_input(self.current_frame)
-        input_dict={self.input_name: self.pr_frame}
-        # get output results
-        self.exec_net.requests[0].infer(inputs=input_dict)
-        outputs = self.exec_net.requests[0].outputs[self.output_name]
-
-        coords = self.preprocess_output(outputs)
-        h,w = self.current_frame.shape[0:2]
-        coords = coords * np.array([w, h, w, h])
-        coords = coords.astype(np.int32)
-
-        le_xmin=coords[0]-10
-        le_ymin=coords[1]-10
-        le_xmax=coords[0]+10
-        le_ymax=coords[1]+10
+        _input_dict={self.input_name: self.pr_frame}
         
-        re_xmin=coords[2]-10
-        re_ymin=coords[3]-10
-        re_xmax=coords[2]+10
-        re_ymax=coords[3]+10
-        
-        left_eye =  self.current_frame[le_ymin:le_ymax, le_xmin:le_xmax]
-        right_eye = self.current_frame[re_ymin:re_ymax, re_xmin:re_xmax]
-        eye_coords = [[le_xmin,le_ymin,le_xmax,le_ymax], [re_xmin,re_ymin,re_xmax,re_ymax]]
-        return left_eye, right_eye, eye_coords
+        # Perform inference on the frame and get output results
+        result = self.req_get(r_type="sync", input_dict=_input_dict, outputs=self.output_name)
 
-
-    def preprocess_input(self, image):
-        return Helper.preprocess_input(self, image)
+        left_eye, right_eye = self.preprocess_output(result)
+        return left_eye, right_eye
 
     def preprocess_output(self, outputs):
         '''
         Before feeding the output of this model to the next model,
         you might have to preprocess the output. This function is where you can do that.
         '''
-        outputs=outputs[0]
-        leye_x = outputs[0][0][0]
-        leye_y = outputs[1][0][0]
-        reye_x = outputs[2][0][0]
-        reye_y = outputs[3][0][0]
-        
-        return leye_x, leye_y, reye_x, reye_y
+        l_eye_x, l_eye_y, r_eye_x, r_eye_y = map(lambda i : outputs[0][i][0][0], [0,1,2,3])
+        coords = [l_eye_x,l_eye_y,r_eye_x,r_eye_y]
 
+        # post processing
+        h,w = self.current_frame.shape[0:2]
+        coords = coords * np.array([w, h, w, h])
+        coords = coords.astype(np.int32)
+ 
+        # resize the box
+        le_xmin, le_ymin, re_xmin, re_ymin = map(lambda i : coords[i]-15, [0,1,2,3])
+        le_xmax, le_ymax, re_xmax, re_ymax = map(lambda i : coords[i]+15, [0,1,2,3])
+        
+        # cropping
+        left_eye =  self.current_frame[le_ymin:le_ymax, le_xmin:le_xmax]
+        right_eye = self.current_frame[re_ymin:re_ymax, re_xmin:re_xmax]
+        
+        return left_eye, right_eye

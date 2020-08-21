@@ -1,14 +1,24 @@
-from helper import Helper
 import cv2
+import numpy as np
+from helper import Helper
+import time
 
 class HeadPoseEstimationModel(Helper):
     '''
-    Class for HP Model.
+    Class for the Head Pose Estimation Model.
     '''
-    def __init__(self, model, device, extensions=None):
+    def __init__(self, model, device='CPU', extensions=None):
         super().__init__(model,device,extensions)
-        
+        self.current_frame = None
+        self.show = False
+        self.model_name = "Head Pose Estimation"
+
     def load_model(self):
+        '''
+        TODO: You will need to complete this method.
+        This method is for loading the model to the device specified by the user.
+        If your model requires any Plugins, this is where you can load them.
+        '''
         Helper.load_model(self)
 
     def predict(self, image):
@@ -16,20 +26,16 @@ class HeadPoseEstimationModel(Helper):
         TODO: You will need to complete this method.
         This method is meant for running predictions on the input image.
         '''
-        
         self.current_frame = image
         # process the current frame
         self.pr_frame = self.preprocess_input(self.current_frame)
-        input_dict={self.input_name: self.pr_frame}
-        # get output results
-        self.exec_net.requests[0].infer(inputs=input_dict)
-        outputs = self.exec_net.requests[0].outputs
-        pose_angles = self.preprocess_output(outputs)
-        
-        return pose_angles
+        _input_dict={self.input_name: self.pr_frame}
 
-    def preprocess_input(self, image):
-        return Helper.preprocess_input(self, image)
+        # Perform inference on the frame and get output results
+        result = self.req_get(r_type="sync", input_dict=_input_dict)
+
+        pose_angles = self.preprocess_output(result)
+        return pose_angles
 
     def preprocess_output(self, outputs):
         '''
@@ -37,7 +43,7 @@ class HeadPoseEstimationModel(Helper):
         you might have to preprocess the output. This function is where you can do that.
         '''
         # Parse head pose detection results
-        angle_p_fc = outputs["angle_p_fc"][0][0]
-        angle_y_fc = outputs["angle_y_fc"][0][0]
-        angle_r_fc = outputs["angle_r_fc"][0][0]
-        return [angle_y_fc,angle_p_fc,angle_r_fc]
+        angle_names = ["angle_y_fc","angle_p_fc","angle_r_fc"]
+        yaw,pitch,roll = map(lambda a : outputs[a][0][0], angle_names)
+
+        return [yaw,pitch,roll]
