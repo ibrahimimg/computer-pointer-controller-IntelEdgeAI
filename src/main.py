@@ -12,6 +12,7 @@ import logging
 import cv2
 import numpy as np
 import argparse
+import pyautogui
 
 from mouse_controller import MouseController
 from input_feeder import InputFeeder
@@ -39,7 +40,8 @@ def build_args():
         'ge': "specify the Path to Gaze Estimation model xml file",
         'i' : "specify input, use media file or type cam to use your webcam",
         'd' : "specify the target device to run inference on: CPU, GPU, FPGA or MYRIAD (for NCS2)",
-        'pt': "specify probability threshold for model to detect the face accurately from the frame "
+        'pt': "specify probability threshold for model to detect the face accurately from the frame ",
+        'x' : "specify path to CPU extension file, if applicable, for OpenVINO version < 2020"
     }
         
     required.add_argument("-fd", "--face_detection_model", required=True, help=help['fd'], type=str)
@@ -50,6 +52,7 @@ def build_args():
     
     optional.add_argument("-d", "--device", required=False, default="CPU", help=help['d'], type=str)
     optional.add_argument("-pt", "--prob_threshold", required=False, default=0.6, help=help['pt'], type=float)
+    optional.add_argument("-x", "--extension", required=False, default=None, help=help['x'], type=str)
     
     return parser
 
@@ -63,10 +66,10 @@ def main():
     logger.info("\n==========<COMPUTER POINTER CONTROLLER>==========\n")
     
     # initialize model object for each class
-    FDModel = FaceDetectionModel(model=args.face_detection_model, device=args.device, extensions=None, threshold=args.prob_threshold)
-    FLDModel = FacialLandmarksDetectionModel(model=args.facial_landmark_model, device=args.device, extensions=None)
-    HPEModel = HeadPoseEstimationModel(model=args.head_pose_model, device=args.device,  extensions=None)
-    GEModel = GazeEstimationModel(model=args.gaze_estimation_model, device=args.device,  extensions=None)
+    FDModel = FaceDetectionModel(model=args.face_detection_model, device=args.device, extensions=args.extension, threshold=args.prob_threshold)
+    FLDModel = FacialLandmarksDetectionModel(model=args.facial_landmark_model, device=args.device, extensions=args.extension)
+    HPEModel = HeadPoseEstimationModel(model=args.head_pose_model, device=args.device,  extensions=args.extension)
+    GEModel = GazeEstimationModel(model=args.gaze_estimation_model, device=args.device,  extensions=args.extension)
     
     models = {
         'fd' : FDModel,
@@ -141,9 +144,19 @@ def main():
             # Error during LR_eyes processing
             continue
 
-        elif frame_count % 5 == 0:
-            logger.info("changing mouse position... moving")
-            mouse_controller.move(x,y)
+        '''
+        wait on before moving mouse again
+        this is recomended to avoid failsafe exception
+        but you change this setting
+        '''
+
+        if frame_count % 5 == 0:
+            try:
+                logger.info("changing mouse position... moving")
+                mouse_controller.move(x,y)
+            except pyautogui.FailSafeException:
+                logger.error("safe exception From pyautogui")
+                continue
 
         # Break if escape key pressed
         if key_pressed==27:
