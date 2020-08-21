@@ -65,14 +65,22 @@ paste these commands
 
 * install required libraries in virtualenv
 
-    `pip install -r requirements.txt
+    `pip install -r requirements.txt`
 
 
 ## Documentation
-### Running Demo
-    cd src
+use
 
-    `python3.7 main.py -fd ../intel/face-detection-adas-binary-0001/FP32-INT1/face-detection-adas-binary-0001.xml -fl ../intel/landmarks-regression-retail-0009/FP16/landmarks-regression-retail-0009.xml -hp ../intel/head-pose-estimation-adas-0001/FP16/head-pose-estimation-adas-0001.xml -ge ../intel/gaze-estimation-adas-0002/FP16/gaze-estimation-adas-0002.xml -d CPU -i ../bin/demo.mp4 `
+`python main.py --help`
+
+to see the available options with description. 
+
+### Running Demo
+    
+`cd src`
+
+`python3.7 main.py -fd ../intel/face-detection-adas-binary-0001/FP32-INT1/face-detection-adas-binary-0001.xml -fl ../intel/landmarks-regression-retail-0009/FP16/landmarks-regression-retail-0009.xml -hp ../intel/head-pose-estimation-adas-0001/FP16/head-pose-estimation-adas-0001.xml -ge ../intel/gaze-estimation-adas-0002/FP16/gaze-estimation-adas-0002.xml -d CPU -i ../bin/demo.mp4 `
+
 
 ## Benchmarks
 *TODO:* Include the benchmark results of running your model on multiple hardwares and multiple model precisions. Your benchmarks can include: model loading time, input/output processing time, model inference time etc.
