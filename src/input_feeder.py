@@ -36,7 +36,10 @@ class InputFeeder:
         '''
         while True:
             for _ in range(10):
-                flag, frame=self.cap.read()
+                if self.input_type != "image" :
+                    flag, frame=self.cap.read()
+                else: 
+                    flag, frame=True,self.cap
             yield flag,frame
 
 

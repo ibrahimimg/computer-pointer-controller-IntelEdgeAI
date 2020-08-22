@@ -97,7 +97,12 @@ def main():
     if input_source.lower() !="cam":
         # check if input file exist
         if os.path.exists(input_source) and os.path.isfile(input_source):
-            input_type = "video"
+            image_formats=[".png",".jpg",".bmp",".jpeg"]
+            is_image = [True for x in image_formats if input_source.endswith(x)]
+            if is_image:
+                input_type = "image"
+            else:
+                input_type = "video"
             input_feeder = InputFeeder(input_type = input_type, input_file = input_source)
         else:
             logger.error("Input file is not a file, or does't exist")
@@ -149,7 +154,11 @@ def main():
         this is recomended to avoid failsafe exception
         but you change this setting
         '''
-
+        if input_type=="image":
+            cv2.imshow(input_type, cv2.resize(frame,(500,500)))
+            mouse_controller.move(x,y)
+            break
+            
         if frame_count % 5 == 0:
             try:
                 logger.info("changing mouse position... moving")
