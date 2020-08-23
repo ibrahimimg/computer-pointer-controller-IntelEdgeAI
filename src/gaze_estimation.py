@@ -15,6 +15,7 @@ class GazeEstimationModel(Helper):
         self.input_shape_r=self.net.inputs['right_eye_image'].shape
         self.output_names = [n for n in self.net.outputs.keys()]
         self.output_name = self.output_names
+        self.model_name = "Gaze Estimation"
 
     def load_model(self):
         '''
@@ -43,8 +44,10 @@ class GazeEstimationModel(Helper):
             'right_eye_image':re_img_processed
         }
         
+        inference_start = time.time()
         # Perform inference on the frame and get output results
         result = self.req_get(r_type="sync", input_dict=_input_dict)
+        self.inference_time=time.time()-inference_start
 
         outputs = self.preprocess_output(result, hpa)
         new_mouse_coord = outputs[0]

@@ -78,12 +78,17 @@ def main():
         'ge' : GEModel
     }
 
-    logger.info("Loading Models")
+    models_loading_time = 0
     for k in models:
         # load model
+        logger.info("Loading {} Model".format(models[k].model_name))
+        model_t = time.time()
         models[k].load_model()
+        model_tt = (time.time()-model_t)
+        models_loading_time = models_loading_time + model_tt
+        logger.info("time taken to load Model: {:.3f}secs".format(model_tt))
 
-    logger.info("Done. All models are loaded")
+    logger.info("time taken to load All Models: {:.3f}secs\n".format(models_loading_time))
 
 	# setting for mouse controller
     _precision =  "medium"
@@ -113,7 +118,8 @@ def main():
     
     input_feeder.load_data()
     frame_count = 0
-
+    total_inference_time_all = 0
+    
     for flag, frame in input_feeder.next_batch():
         if flag is False:
             # no frame to read
@@ -138,7 +144,15 @@ def main():
         hp_result = HPEModel.predict(cropped_face)
         left_eye, right_eye = FLDModel.predict(cropped_face)
         new_mouse_coords, gaze_vector = GEModel.predict(left_eye, right_eye, hp_result)
-            
+        
+        total_inference_time = 0
+        for key in models:
+            total_inference_time = total_inference_time + models[key].inference_time
+            total_inference_time_all = total_inference_time_all + total_inference_time
+        
+        #uncomment the following line to see the inference time for each frame
+        #logger.info("Inference Time : {:.3f}".format(total_inference_time))
+        
         try:
             x,y = new_mouse_coords
         except:
@@ -170,14 +184,22 @@ def main():
         # Break if escape key pressed
         if key_pressed==27:
             break
-       
-    # Release the capture and destroy any OpenCV window
-    input_feeder.close()
-    cv2.destroyAllWindows()
-
-    logger.info("Stream ended !")
+            
+    if frame_count != 0:
+        # Release the capture and destroy any OpenCV window
+        input_feeder.close()
+        cv2.destroyAllWindows()
     
-    if frame_count == 0:
+        logger.info("Stream ended !")
+
+        fps=round(frame_count/total_inference_time_all,2)
+        print ("\n==========SUMMARY===========")
+        print("models loading time  : ",round(models_loading_time,2))
+        print("frames per seconds   : ",fps)
+        print("total inference time : ",round(total_inference_time_all,2))
+        print ("============================")
+
+    else:
         logger.error("Unable to handle Unsupported file ")
         sys.exit(1)
 

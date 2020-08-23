@@ -27,6 +27,8 @@ class Helper:
         # cpu extensions are added automatically in later versions 2020+ 
         # you can specify the custom path
         self.to_add_extension = False
+        self.model_name = ""
+        self.inference_time = 0.0
 
         # Initialize the inference ingine
         self.ie = IEPlugin(device=self.device)
@@ -45,8 +47,7 @@ class Helper:
         
         except Exception:
             raise ValueError("Could not Initialise the network. does model path exists")
-       
-        
+
         # Get the input layer
         self.input_name=next(iter(self.net.inputs))
         self.input_shape=self.net.inputs[self.input_name].shape

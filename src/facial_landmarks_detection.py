@@ -9,6 +9,7 @@ class FacialLandmarksDetectionModel(Helper):
     def __init__(self, model, device='CPU', extensions=None):
         super().__init__(model,device,extensions)
         self.current_frame = None
+        self.model_name = "Facial Landmarks Detection"
 
     def load_model(self):
         '''
@@ -29,8 +30,10 @@ class FacialLandmarksDetectionModel(Helper):
         self.pr_frame = self.preprocess_input(self.current_frame)
         _input_dict={self.input_name: self.pr_frame}
         
+        inference_start = time.time()
         # Perform inference on the frame and get output results
         result = self.req_get(r_type="sync", input_dict=_input_dict, outputs=self.output_name)
+        self.inference_time=time.time()-inference_start
 
         left_eye, right_eye = self.preprocess_output(result)
         return left_eye, right_eye

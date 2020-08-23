@@ -31,8 +31,10 @@ class HeadPoseEstimationModel(Helper):
         self.pr_frame = self.preprocess_input(self.current_frame)
         _input_dict={self.input_name: self.pr_frame}
 
+        inference_start = time.time()
         # Perform inference on the frame and get output results
         result = self.req_get(r_type="sync", input_dict=_input_dict)
+        self.inference_time=time.time()-inference_start
 
         pose_angles = self.preprocess_output(result)
         return pose_angles
