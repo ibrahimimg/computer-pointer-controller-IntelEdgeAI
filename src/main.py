@@ -119,6 +119,7 @@ def main():
     input_feeder.load_data()
     frame_count = 0
     total_inference_time_all = 0
+    window_closed=False
     
     for flag, frame in input_feeder.next_batch():
         if flag is False:
@@ -131,7 +132,6 @@ def main():
             # preprocess frame as webcam is backwards/inverted
             frame = cv2.flip(frame,1)
             
-        cv2.imshow(input_type, cv2.resize(frame,(500,500)))
         face_detection_result = FDModel.predict(frame)
         # The prediction result should return None, if no face detected
         if face_detection_result is None:
@@ -180,10 +180,19 @@ def main():
             except pyautogui.FailSafeException:
                 logger.error("safe exception From pyautogui")
                 continue
-
+                
+        if not window_closed:
+            cv2.imshow(input_type, cv2.resize(frame,(500,500)))        
+        
         # Break if escape key pressed
         if key_pressed==27:
             break
+            
+        # close the OpenCV window if q key pressed    
+        if key_pressed == ord('q'):
+            window_closed=True
+            cv2.destroyWindow(input_type)
+            logger.info(input_type+" window closed... to exit app, press CTRL+Z")
             
     if frame_count != 0:
         # Release the capture and destroy any OpenCV window
