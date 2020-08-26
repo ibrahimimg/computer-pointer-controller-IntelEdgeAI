@@ -29,6 +29,7 @@ class Helper:
         self.to_add_extension = False
         self.model_name = ""
         self.inference_time = 0.0
+        self.show = False
 
         # Initialize the inference ingine
         self.ie = IEPlugin(device=self.device)

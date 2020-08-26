@@ -57,7 +57,13 @@ class FaceDetectionModel(Helper):
             if confidence > self.threshold:
                 coords_list = [box[3],box[4],box[5], box[6]]
                 coords.append(coords_list)
-                        
+
+                if self.show:
+                    # preprocessing for showing detection
+                    xmin,xmax = map(lambda b : int(b*self.width), [box[3],box[5]])
+                    ymin,ymax = map(lambda b : int(b*self.height), [box[4],box[6]])
+                    cv2.rectangle(self.current_frame,(xmin-15,ymin-15), (xmax+15,ymax+15), (0, 255, 0) , 2)
+            
         # postprocessing
         if len(coords) == 0:
             # No Face detected

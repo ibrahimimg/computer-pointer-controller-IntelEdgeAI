@@ -49,3 +49,11 @@ class HeadPoseEstimationModel(Helper):
         yaw,pitch,roll = map(lambda a : outputs[a][0][0], angle_names)
 
         return [yaw,pitch,roll]
+
+    def show_hp(self, frame, hpa):
+        t_size =  0.7
+        if frame.shape[0]>1000:
+            t_size = 1.4
+        message = "Head Pose Angles (Y|P|R): {:.2f} | {:.2f} | {:.2f}".format(hpa[0],hpa[1],hpa[2])
+        cv2.putText(frame, message, (20, 45), cv2.FONT_HERSHEY_COMPLEX, t_size, (0, 0, 0), 1, cv2.LINE_AA, False)
+        return frame

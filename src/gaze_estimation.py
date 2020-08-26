@@ -68,3 +68,14 @@ class GazeEstimationModel(Helper):
         new_y = (-gaze_vector[0])*sin_value+gaze_vector[1]*cos_value
         
         return (new_x,new_y), gaze_vector
+
+    def show_gaze(self, le, re, gaze_vector):
+        x = int(gaze_vector[0]*12)
+        y = int(gaze_vector[1]*12)
+        w = 160
+        points = (x-w, y-w), (x+w, y+w), (x-w, y+w), (x+w, y-w)
+        le = cv2.line(le, points[0], points[1], (255,0,255), 2)
+        cv2.line(le, points[2], points[3], (0,200,255), 2)
+        re = cv2.line(re, points[0], points[1], (255,0,255), 2)
+        cv2.line(re, points[2], points[3], (0,200,255), 2)
+        return 

@@ -43,13 +43,15 @@ def build_args():
                           help="specify the Path to Gaze Estimation model xml file")
     required.add_argument("-i", "--input", required=True, type=str, 
                           help="specify input, use media file or type cam to use your webcam")
+ 
     optional.add_argument("-d", "--device", required=False, default="CPU", type=str, 
                           help="specify the target device to run inference on: CPU, GPU, FPGA or MYRIAD (for NCS2)")
     optional.add_argument("-pt", "--prob_threshold", required=False, default=0.6, type=float,
                           help="specify probability threshold for model to detect the face accurately from the frame ")
     optional.add_argument("-x", "--extension", required=False, default=None, type=str, 
                           help="specify path to CPU extension file, if applicable, for OpenVINO version < 2020")
-    
+    optional.add_argument("-sh", "--show_output", required=False, default="", type=str, 
+                          help="specify whether to Show Visualization of output results for a model e.g: 'fd fl ge' or use 'all'")
     return parser
 
 def main():
@@ -86,6 +88,11 @@ def main():
         model_loading_finish = (time.time()-model_loading_start)
         models_loading_time = models_loading_time + model_loading_finish
         logger.info("time taken to load Model: {:.3f}secs".format(model_loading_finish))
+
+        # check if model output visualization is specified in sh arg
+        if k in args.show_output or args.show_output=='all':
+            models[k].show = True
+        logger.info("show {} outputs: {} \n".format(models[k].model_name,models[k].show))
 
     logger.info("time taken to load All Models: {:.3f}secs\n".format(models_loading_time))
 
@@ -157,6 +164,11 @@ def main():
         except:
             logger.error("unable to get mouse coordinates for current frame\nReading Next Frame...")
             continue
+        
+        if GEModel.show == True:
+            GEModel.show_gaze(left_eye, right_eye, gaze_vector)
+        if HPEModel.show == True:
+            frame = HPEModel.show_hp(frame, hp_result)
 
         if new_mouse_coords is None:
             # Error during LR_eyes processing

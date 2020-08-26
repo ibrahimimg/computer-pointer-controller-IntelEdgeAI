@@ -59,4 +59,8 @@ class FacialLandmarksDetectionModel(Helper):
         left_eye =  self.current_frame[le_ymin:le_ymax, le_xmin:le_xmax]
         right_eye = self.current_frame[re_ymin:re_ymax, re_xmin:re_xmax]
         
+        if self.show:
+            cv2.rectangle(self.current_frame,(le_xmin,le_ymin),(le_xmax,le_ymax),(255,0,0),2)
+            cv2.rectangle(self.current_frame,(re_xmin,re_ymin),(re_xmax,re_ymax),(255,0,0),2)
+
         return left_eye, right_eye
