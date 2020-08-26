@@ -33,26 +33,22 @@ def build_args():
     required = parser.add_argument_group('required arguments')
     optional = parser.add_argument_group('optional arguments')
     
-    help = {
-        'fd': "specify the Path to Face Detection model xml file",
-        'fl': "specify the Path to Facial Landmarks Detection model xml file",
-        'hp': "specify the Path to Head Pose Estimation model xml file",
-        'ge': "specify the Path to Gaze Estimation model xml file",
-        'i' : "specify input, use media file or type cam to use your webcam",
-        'd' : "specify the target device to run inference on: CPU, GPU, FPGA or MYRIAD (for NCS2)",
-        'pt': "specify probability threshold for model to detect the face accurately from the frame ",
-        'x' : "specify path to CPU extension file, if applicable, for OpenVINO version < 2020"
-    }
-        
-    required.add_argument("-fd", "--face_detection_model", required=True, help=help['fd'], type=str)
-    required.add_argument("-fl", "--facial_landmark_model", required=True, help=help['fl'], type=str)
-    required.add_argument("-hp", "--head_pose_model", required=True, help=help['hp'], type=str)
-    required.add_argument("-ge", "--gaze_estimation_model", required=True, help=help['ge'], type=str)
-    required.add_argument("-i", "--input", required=True, help=help['i'], type=str)
-    
-    optional.add_argument("-d", "--device", required=False, default="CPU", help=help['d'], type=str)
-    optional.add_argument("-pt", "--prob_threshold", required=False, default=0.6, help=help['pt'], type=float)
-    optional.add_argument("-x", "--extension", required=False, default=None, help=help['x'], type=str)
+    required.add_argument("-fd", "--face_detection_model", required=True, type=str, 
+                          help="specify the Path to Face Detection model xml file")
+    required.add_argument("-fl", "--facial_landmark_model", required=True, type=str, 
+                          help="specify the Path to Facial Landmarks Detection model xml file")
+    required.add_argument("-hp", "--head_pose_model", required=True, type=str, 
+                          help="specify the Path to Head Pose Estimation model xml file")
+    required.add_argument("-ge", "--gaze_estimation_model", required=True, type=str, 
+                          help="specify the Path to Gaze Estimation model xml file")
+    required.add_argument("-i", "--input", required=True, type=str, 
+                          help="specify input, use media file or type cam to use your webcam")
+    optional.add_argument("-d", "--device", required=False, default="CPU", type=str, 
+                          help="specify the target device to run inference on: CPU, GPU, FPGA or MYRIAD (for NCS2)")
+    optional.add_argument("-pt", "--prob_threshold", required=False, default=0.6, type=float,
+                          help="specify probability threshold for model to detect the face accurately from the frame ")
+    optional.add_argument("-x", "--extension", required=False, default=None, type=str, 
+                          help="specify path to CPU extension file, if applicable, for OpenVINO version < 2020")
     
     return parser
 
@@ -63,7 +59,10 @@ def main():
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger()
     #os.system('clear')
-    logger.info("\n==========<COMPUTER POINTER CONTROLLER>==========\n")
+    print("\n")
+    logger.info("starting app ...")
+    print("\n==========<COMPUTER POINTER CONTROLLER>==========")
+    print("============>(c) Ibrahim Ishaka 2020<============\n")
     
     # initialize model object for each class
     FDModel = FaceDetectionModel(model=args.face_detection_model, device=args.device, extensions=args.extension, threshold=args.prob_threshold)
@@ -82,11 +81,11 @@ def main():
     for k in models:
         # load model
         logger.info("Loading {} Model".format(models[k].model_name))
-        model_t = time.time()
+        model_loading_start = time.time()
         models[k].load_model()
-        model_tt = (time.time()-model_t)
-        models_loading_time = models_loading_time + model_tt
-        logger.info("time taken to load Model: {:.3f}secs".format(model_tt))
+        model_loading_finish = (time.time()-model_loading_start)
+        models_loading_time = models_loading_time + model_loading_finish
+        logger.info("time taken to load Model: {:.3f}secs".format(model_loading_finish))
 
     logger.info("time taken to load All Models: {:.3f}secs\n".format(models_loading_time))
 
