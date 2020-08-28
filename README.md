@@ -83,10 +83,14 @@ to see the available options with description.
 
 
 ## Benchmarks
-*TODO:* Include the benchmark results of running your model on multiple hardwares and multiple model precisions. Your benchmarks can include: model loading time, input/output processing time, model inference time etc.
+
+I have Measured the performance of all possible combination i.e using different model precisions on the CPU device and the log file is saved. see [stdout.log](./stdout.log)
 
 ## Results
-*TODO:* Discuss the benchmark results and explain why you are getting the results you are getting. For instance, explain why there is difference in inference time for FP32, FP16 and INT8 models.
+
+In stdout.log file, we can see that the models loading time, frames per second and total inference time are all depends on the model precisions used. using other devices such as GPU will vary different results.
+
+fd=face detection model, fl=facial landmarks, hp=head pose e and ge=gaze estimation
 
 ## Stand Out Suggestions
 This is where you can provide information about the stand out suggestions that you have attempted.
