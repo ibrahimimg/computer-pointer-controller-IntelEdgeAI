@@ -1,0 +1,900 @@
+INFO:root:starting app ...
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.061secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.204secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.077secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.100secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:time taken to load All Models: 0.441secs
+
+INFO:root:Total Inference Time : 0.052
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.039
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.041
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.045
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.039
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Stream ended !
+INFO:root:starting app ...
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.073secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.060secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.094secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.205secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:time taken to load All Models: 0.431secs
+
+INFO:root:Total Inference Time : 0.050
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.041
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.046
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.043
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.043
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Stream ended !
+INFO:root:starting app ...
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.198secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.062secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.117secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.098secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:time taken to load All Models: 0.476secs
+
+INFO:root:Total Inference Time : 0.053
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.040
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.043
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.044
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.043
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Stream ended !
+INFO:root:starting app ...
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.058secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.113secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.202secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.097secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:time taken to load All Models: 0.470secs
+
+INFO:root:Total Inference Time : 0.051
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.045
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.042
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Stream ended !
+INFO:root:starting app ...
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.074secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.207secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.134secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.097secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:time taken to load All Models: 0.512secs
+
+INFO:root:Total Inference Time : 0.052
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.041
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.042
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.041
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.041
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Stream ended !
+INFO:root:starting app ...
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.094secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.198secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.133secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.096secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:time taken to load All Models: 0.522secs
+
+INFO:root:Total Inference Time : 0.051
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Stream ended !
+INFO:root:starting app ...
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.093secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.110secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.130secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.209secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:time taken to load All Models: 0.542secs
+
+INFO:root:Total Inference Time : 0.052
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.040
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.046
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.040
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Stream ended !
+INFO:root:starting app ...
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.123secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.094secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.206secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.720secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:time taken to load All Models: 1.143secs
+
+INFO:root:Total Inference Time : 0.050
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.039
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.041
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Stream ended !
+INFO:root:starting app ...
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.704secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.108secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.131secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.214secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:time taken to load All Models: 1.157secs
+
+INFO:root:Total Inference Time : 0.055
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Stream ended !
+INFO:root:starting app ...
+INFO:root:Loading Head Pose Estimation Model
+INFO:root:time taken to load Model: 0.724secs
+INFO:root:show Head Pose Estimation outputs: True 
+
+INFO:root:Loading Face Detection Model
+INFO:root:time taken to load Model: 0.204secs
+INFO:root:show Face Detection outputs: True 
+
+INFO:root:Loading Gaze Estimation Model
+INFO:root:time taken to load Model: 0.760secs
+INFO:root:show Gaze Estimation outputs: True 
+
+INFO:root:Loading Facial Landmarks Detection Model
+INFO:root:time taken to load Model: 0.147secs
+INFO:root:show Facial Landmarks Detection outputs: True 
+
+INFO:root:time taken to load All Models: 1.835secs
+
+INFO:root:Total Inference Time : 0.049
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.038
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.038
+INFO:root:changing mouse position... moving
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.037
+INFO:root:Total Inference Time : 0.036
+INFO:root:Total Inference Time : 0.038
+INFO:root:Stream ended !

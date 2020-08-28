@@ -1,0 +1,165 @@
+
+DEVICE :  CPU
+python_version = 3.7
+[setupvars.sh] OpenVINO environment initialized
+
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP32 FP32 FP32
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  0.44
+frames per seconds   :  9.5
+total inference time :  6.21
+============================
+----------------------------
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP16 FP32 FP32
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  0.43
+frames per seconds   :  19.51
+total inference time :  3.02
+============================
+----------------------------
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP16 FP16 FP32
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  0.48
+frames per seconds   :  7.26
+total inference time :  8.12
+============================
+----------------------------
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP16 FP16 FP16
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  0.47
+frames per seconds   :  12.79
+total inference time :  4.61
+============================
+----------------------------
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP32-INT8 FP32 FP32
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  0.51
+frames per seconds   :  9.11
+total inference time :  6.48
+============================
+----------------------------
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP32-INT8 FP16 FP32
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  0.52
+frames per seconds   :  9.15
+total inference time :  6.45
+============================
+----------------------------
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP32-INT8 FP16 FP16
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  0.54
+frames per seconds   :  18.58
+total inference time :  3.18
+============================
+----------------------------
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP32-INT8 FP32-INT8 FP32
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  1.14
+frames per seconds   :  12.87
+total inference time :  4.58
+============================
+----------------------------
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP32-INT8 FP32-INT8 FP16
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  1.16
+frames per seconds   :  19.41
+total inference time :  3.04
+============================
+----------------------------
+RUNNING APP 
+MODELS COMBINATION: fd, fl, hp, ge :  FP32-INT1 FP32-INT8 FP32-INT8 FP32-INT8
+
+
+
+==========<COMPUTER POINTER CONTROLLER>==========
+============>(c) Ibrahim Ishaka 2020<============
+
+
+
+==========SUMMARY===========
+models loading time  :  1.83
+frames per seconds   :  9.24
+total inference time :  6.39
+============================
+----------------------------
