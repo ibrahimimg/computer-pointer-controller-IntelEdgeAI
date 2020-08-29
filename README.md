@@ -1,10 +1,18 @@
 # Computer Pointer Controller
 
+![pointer-controller](./images/demo.gif)
+
 Computer Pointer Controller (CPC) is A.I application to control the computer mouse pointer movement using eye's gaze, the project use Inference Engine API from Intel's OpenVINO ToolKit with python implementation. The four different pretrained models will run in the same machine; the gaze estimation model will use the results from the previous models to find the new mouse coordinates, the app then change the mouse pointer position accordingly.
 
 ## How it Works
 
 The app will use a media file or webcam as input and capture frames, each frame is sent to face detection model, after some preprocessing it returns the cropped face, the cropped face is then sent to the head post estimation and facial landmarks detection models for further processing, the cropped eyes (left and right eyes) are returned by facial landmarks detection model while head pose estimation model returns head pose angles, these results are passed to the gaze estimation model where the returned coordinates will be used as new values for pointer and hence move the mouse position according to result.
+
+### Pipeline
+
+- The flow of data will look like this
+    ![pipeline-diagram](./images/pipeline.png)
+
 
 ## Requirements
 
@@ -67,6 +75,7 @@ paste these commands
 
     `pip install -r requirements.txt`
 
+    ![demo](./images/venv.png)
 
 ## Documentation
 use
@@ -81,6 +90,7 @@ to see the available options with description.
 
 `python3.7 main.py -fd ../intel/face-detection-adas-binary-0001/FP32-INT1/face-detection-adas-binary-0001.xml -fl ../intel/landmarks-regression-retail-0009/FP16/landmarks-regression-retail-0009.xml -hp ../intel/head-pose-estimation-adas-0001/FP16/head-pose-estimation-adas-0001.xml -ge ../intel/gaze-estimation-adas-0002/FP16/gaze-estimation-adas-0002.xml -d CPU -i ../bin/demo.mp4 `
 
+![demo](./images/cpc.png)
 
 ## Benchmarks
 
